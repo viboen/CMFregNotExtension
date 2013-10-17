@@ -139,8 +139,7 @@ int main(int argc, char * argv [])
 /*Get Environment Variable*/
 
   std::string pPath;
-  pPath = itksys::SystemTools::FindProgram("ResampleScalarVolume");   //getenv("SLICER");;
-  if( pPath.empty() ){ cout << "The current Slicer path is: empty" << pPath << std::endl; }
+  pPath = itksys::SystemTools::FindProgram("ResampleScalarVolume");
 
 /*Endvironment Variable*/
 
@@ -168,7 +167,7 @@ int main(int argc, char * argv [])
 	
   }
   catch(itk::ExceptionObject &excep){
-	std::cerr << excep << ":exception caught!" << std::endl;
+	std::cout << excep << ":exception caught!" << std::endl;
 	return EXIT_FAILURE;
   }
 
