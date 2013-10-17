@@ -140,7 +140,6 @@ int main(int argc, char * argv [])
 
   std::string IMPath;
   IMPath =  itksys::SystemTools::FindProgram("MaskScalarVolume");
-  if(IMPath.empty()){ cout << "The current ImageMath path is empty! " << std::endl; }
 
 /*Endvironment Variable*/
 
@@ -170,7 +169,7 @@ int main(int argc, char * argv [])
 	
   }
   catch(itk::ExceptionObject &excep){
-	std::cerr << argv[0] << ":exception caught!" << std::endl;
+	std::cout << excep << ":exception caught!" << std::endl;
 	return EXIT_FAILURE;
   }
 
